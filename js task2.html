@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+      
+
+	.btn {
+		 width:110px;
+		 height: 40px;
+		 margin-left:10px;
+		 font-size: 22px;
+	}
+
+	#btn {
+		margin-left: 10px;
+	}
+
+
+	.container {
+		width:530px;
+		height: 530px;
+		border:2px solid black;
+		background: grey;
+		margin-top: 40px;
+	}
+
+	#plus {
+		background:orange;
+	}
+
+	#minus {
+		background:violet;
+	}
+	#divide {
+		background:lightgrey;
+	}
+	h2 {
+		color:#2E381A;
+	}
+</style>
+
+
+
+<body>
+	
+    <div class="container">
+    	<div class="row">
+    		<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+            <h2>SIMPLE CALCULATOR</h2>
+    	<form name="calculator">
+                <br>
+                
+     <input style="width: 380px;height: 40px;margin-left: 10px;text-align: right;font-size:20px;" type="text" name="display" id="display" value="" >    		
+ </div>
+    
+
+
+    	<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+    		<br>
+    		<br>
+    
+      <input type="button"class="btn btn-primary" value="1"onclick="run1()">
+      <input type="button" class="btn btn-primary" value="2" onclick="run2()">
+      <input type="button" class="btn btn-primary" value="3" onclick="run3()"><br>
+        <br>
+      <input type="button" class="btn btn-primary" value="4" onclick="run4()">
+      <input type="button" class="btn btn-primary" value="5" onclick="run5()">
+      <input type="button" class="btn btn-primary" value="6" onclick="run6()"><br>
+      <br>
+      <input type="button" class="btn btn-primary" value="7" onclick="run7()">
+      <input type="button" class="btn btn-primary" value="8" onclick="run8()">
+      <input type="button" class="btn btn-primary" value="9" onclick="run9()"><br>
+      <br>
+      <input type="button" class="btn btn-primary" value="*" id="multiply" onclick="runMultiply()">
+      <input type="button" class="btn btn-primary" value="0" onclick="run0()">
+      <input type="button" class="btn btn-success"value="=" onclick="runEquals()"><br>
+      <br>
+      <input type="button" class="btn" id="plus" value="+" onclick="runPlus()">
+      <input type="button" class="btn" id="minus" value="-" onclick="runMinus()">
+      <input type="button" class="btn" id="divide" value="/" onclick="runDivide()">
+      <br>
+      <br>
+
+       <input type="submit"  id="btn"class=" btn btn-danger text-center"id="clearMenu" value="C" onclick="runClearMenu()">
+       </div>
+       </form>	
+       
+       </div>
+   </div>
+</div>
+
+<script>
+
+function run1(){
+	document.calculator.display.value += "1"
+};
+
+function run2(){
+	document.calculator.display.value += "2"
+};
+function run3(){
+	document.calculator.display.value += "3"
+};
+function run4(){
+	document.calculator.display.value += "4"
+};
+function run5(){
+	document.calculator.display.value += "5"
+};
+function run6(){
+	document.calculator.display.value += "6"
+};
+function run7(){
+	document.calculator.display.value += "7"
+};
+function run8(){
+	document.calculator.display.value += "8"
+};
+function run9(){
+	document.calculator.display.value += "9"
+};
+function run0(){
+	document.calculator.display.value += "0"
+};
+function runPlus(){
+	document.calculator.display.value += "+"
+};
+function runMinus(){
+	document.calculator.display.value += "-"
+};
+function runDivide(){
+	document.calculator.display.value += "/"
+};
+function runMultiply(){
+	document.calculator.display.value += "*"
+};
+function runClearMenu(){
+	document.calculator.display.value += ""
+};
+
+function runEquals() {
+	var equals = eval (document.calculator.display.value)
+	document.calculator.display.value = equals;
+	
+
+}
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
